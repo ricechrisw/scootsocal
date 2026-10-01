@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-"build": "prisma generate && prisma db push && next build",    "start": "next start",
-    "lint": "eslint",
+"build": "prisma generate && prisma db push && npx tsx prisma/seed.ts && next build",    "lint": "eslint",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:seed": "node --env-file=.env ./node_modules/tsx/dist/cli.mjs prisma/seed.ts",
