@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: scoot
+      POSTGRES_PASSWORD: scoot
+      POSTGRES_DB: scootsocal
+    ports:
+      - "5432:5432"
+    volumes:
+      - scoot_pg:/var/lib/postgresql/data
+
+volumes:
+  scoot_pg:

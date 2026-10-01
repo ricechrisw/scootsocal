@@ -1,0 +1,43 @@
+{
+  "name": "scootsocal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "node --env-file=.env ./node_modules/tsx/dist/cli.mjs prisma/seed.ts",
+    "db:setup": "prisma generate && prisma db push && npm run db:seed",
+    "setup": "prisma generate && prisma db push && npm run db:seed"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "6.16.3",
+    "bcryptjs": "^3.0.3",
+    "jose": "^6.2.12",
+    "next": "16.3.6",
+    "prisma": "6.16.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "stripe": "^22.6.2",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@stripe/cli": "^1.52.0",
+    "@stripe/cli-darwin-arm64": "^1.52.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "playwright": "^1.63.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5"
+  }
+}

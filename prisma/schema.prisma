@@ -1,0 +1,118 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id           String        @id @default(cuid())
+  firstName    String
+  lastName     String
+  email        String        @unique
+  phone        String
+  createdAt    DateTime      @default(now())
+  reservations Reservation[]
+}
+
+model ScooterClass {
+  id             String          @id @default(cuid())
+  slug           String          @unique
+  name           String
+  dailyRateCents Int
+  unitCount      Int
+  weightCap      String
+  description    String
+  photoPath      String
+  active         Boolean         @default(true)
+  reservations   Reservation[]
+  holds          InventoryHold[]
+}
+
+model Reservation {
+  id                      String          @id @default(cuid())
+  code                    String          @unique
+  customerId              String
+  customer                Customer        @relation(fields: [customerId], references: [id])
+  classId                 String
+  scooterClass            ScooterClass    @relation(fields: [classId], references: [id])
+  unitLabel               String?
+  startDate               String
+  endDate                 String
+  status                  String
+  street                  String
+  city                    String
+  state                   String
+  zip                     String
+  placeType               String
+  propertyName            String?
+  guestName               String?
+  deliveryWindow          String
+  pickupWindow            String
+  riderWeight             Int?
+  notes                   String?
+  subtotalCents           Int
+  taxCents                Int
+  totalCents              Int
+  stripeCustomerId        String?
+  stripeCheckoutSessionId String?
+  stripePaymentIntentId   String?
+  stripeChargeId          String?
+  stripePaymentStatus     String?
+  receiptUrl              String?
+  cardBrand               String?
+  cardLast4               String?
+  refundCents             Int             @default(0)
+  stripeRefundIds         String?
+  paidOffline             Boolean         @default(false)
+  adminNotes              String?
+  createdAt               DateTime        @default(now())
+  updatedAt               DateTime        @updatedAt
+  holds                   InventoryHold[]
+
+  @@index([status, startDate, endDate])
+  @@index([classId, startDate, endDate])
+  @@index([customerId])
+}
+
+model InventoryHold {
+  id            String       @id @default(cuid())
+  reservationId String
+  reservation   Reservation  @relation(fields: [reservationId], references: [id], onDelete: Cascade)
+  classId       String
+  scooterClass  ScooterClass @relation(fields: [classId], references: [id])
+  date          String
+  expiresAt     DateTime
+
+  @@index([classId, date])
+  @@index([expiresAt])
+}
+
+model AdminUser {
+  id           String @id @default(cuid())
+  name         String @default("")
+  email        String @unique
+  passwordHash String
+}
+
+model AppSetting {
+  key   String @id
+  value String
+}
+
+model ProcessedStripeEvent {
+  id        String   @id
+  type      String
+  createdAt DateTime @default(now())
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+}

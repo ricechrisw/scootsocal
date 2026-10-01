@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-11T07:37:49Z",
+  "title": "Design System: Scoot SoCal",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Deep Ocean Navy",
+        "canonical": "#0b1f3a",
+        "tonalRamp": ["#071526", "#0b1f3a", "#163056", "#1a3558", "#2a4a72", "#4a6d96", "#7a96b5", "#d7e0ea"]
+      },
+      "navy-ink": {
+        "role": "primary",
+        "displayName": "Night Harbor",
+        "canonical": "#071526",
+        "tonalRamp": ["#040c14", "#071526", "#0b1f3a", "#163056", "#1a3558", "#2a4a72", "#4a6d96", "#c5d0dc"]
+      },
+      "citrus": {
+        "role": "secondary",
+        "displayName": "SoCal Citrus",
+        "canonical": "#e85d04",
+        "tonalRamp": ["#5c2401", "#9a3c02", "#c44c03", "#e85d04", "#f07830", "#f49a64", "#f8c4a0", "#fde8d8"]
+      },
+      "citrus-ink": {
+        "role": "secondary",
+        "displayName": "Burnt Citrus",
+        "canonical": "#9a3c02",
+        "tonalRamp": ["#4a1e01", "#6b2a01", "#9a3c02", "#c44c03", "#e85d04", "#f49a64", "#f8c4a0", "#fde8d8"]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Warm Sand",
+        "canonical": "#f6f1e8",
+        "tonalRamp": ["#3a3428", "#6b5f4a", "#9a8b70", "#c4b89a", "#eadfcb", "#f6f1e8", "#fffdf8", "#ffffff"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#fffdf8",
+        "tonalRamp": ["#6b5f4a", "#9a8b70", "#c4b89a", "#eadfcb", "#f6f1e8", "#faf6ef", "#fffdf8", "#ffffff"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Navy Hairline",
+        "canonical": "rgba(11, 31, 58, 0.16)",
+        "tonalRamp": ["rgba(11, 31, 58, 0.72)", "rgba(11, 31, 58, 0.56)", "rgba(11, 31, 58, 0.40)", "rgba(11, 31, 58, 0.28)", "rgba(11, 31, 58, 0.16)", "rgba(11, 31, 58, 0.10)", "rgba(11, 31, 58, 0.06)", "rgba(11, 31, 58, 0.03)"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Flash White",
+        "canonical": "#fff",
+        "tonalRamp": ["#6b5f4a", "#9a8b70", "#c4b89a", "#eadfcb", "#f6f1e8", "#fffdf8", "#fff", "#ffffff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page H1 only; max 18ch." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2." },
+      "title": { "displayName": "Title", "purpose": "Wordmark and card titles." },
+      "body": { "displayName": "Body", "purpose": "Page copy on sand or paper." },
+      "label": { "displayName": "Label", "purpose": "Buttons, form labels, analog lines, nav." },
+      "price": { "displayName": "Price", "purpose": "Package dollars with tabular-nums." }
+    },
+    "shadows": [
+      { "name": "offer-lift", "value": "0 10px 28px rgba(11, 31, 58, 0.12)", "purpose": "Price strip, hero figure, form panel." },
+      { "name": "card-lift", "value": "0 8px 20px rgba(11, 31, 58, 0.06)", "purpose": "Fleet cards." },
+      { "name": "bar-lift", "value": "0 -8px 24px rgba(11, 31, 58, 0.12)", "purpose": "Mobile action bar, upward." }
+    ],
+    "motion": [
+      { "name": "citrus-hover", "value": "brightness(1.05)", "purpose": "Citrus pills lighten on hover; no translate, no shadow jump." }
+    ],
+    "breakpoints": [
+      { "name": "price-stack", "value": "499px" },
+      { "name": "desktop", "value": "800px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Citrus pill",
+      "kind": "button",
+      "refersTo": "button-citrus",
+      "description": "Request dates and form submit — always citrus on white.",
+      "html": "<a class=\"ds-btn ds-btn-citrus\" href=\"#contact\">Request dates</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; min-height: 48px; padding: 0.7rem 1.15rem; border-radius: 999px; border: 0; font-family: \"Source Sans 3\", \"Source Sans Pro\", \"Segoe UI\", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; cursor: pointer; } .ds-btn-citrus { background: var(--citrus, #e85d04); color: #fff; } .ds-btn-citrus:hover { color: #fff; filter: brightness(1.05); } .ds-btn:focus-visible { outline: 3px solid var(--citrus, #e85d04); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navy pill",
+      "kind": "button",
+      "refersTo": "button-navy",
+      "description": "Call on sand — navy fill, sand label.",
+      "html": "<a class=\"ds-btn ds-btn-navy\" href=\"tel:+19519029375\">Call 951-902-9375</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.7rem 1.15rem; border-radius: 999px; border: 0; font-family: \"Source Sans 3\", \"Source Sans Pro\", \"Segoe UI\", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; cursor: pointer; } .ds-btn-navy { background: var(--navy, #0b1f3a); color: var(--sand, #f6f1e8); } .ds-btn-navy:hover { color: var(--sand, #f6f1e8); } .ds-btn:focus-visible { outline: 3px solid var(--citrus, #e85d04); outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost pill",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Call on navy chrome — sand label, sand border.",
+      "html": "<div class=\"ds-navy-slot\"><a class=\"ds-btn ds-btn-ghost\" href=\"tel:+19519029375\">Call 951-902-9375</a></div>",
+      "css": ".ds-navy-slot { background: var(--navy, #0b1f3a); padding: 0.75rem 1rem; } .ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0.45rem 0.9rem; border-radius: 999px; font-family: \"Source Sans 3\", \"Source Sans Pro\", \"Segoe UI\", sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; cursor: pointer; } .ds-btn-ghost { background: transparent; color: var(--sand, #f6f1e8); border: 1.5px solid rgba(246, 241, 232, 0.45); } .ds-btn-ghost:hover { color: #fff; border-color: #fff; } .ds-btn:focus-visible { outline: 3px solid var(--citrus, #e85d04); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Visible 700-weight label over a 48px white field.",
+      "html": "<label class=\"ds-field\">Name <input type=\"text\" name=\"name\" /></label>",
+      "css": ".ds-field { display: grid; gap: 0.3rem; font-family: \"Source Sans 3\", \"Source Sans Pro\", \"Segoe UI\", sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--navy, #0b1f3a); } .ds-field input { font-family: inherit; font-weight: 400; font-size: 1.125rem; padding: 0.7rem 0.75rem; border-radius: 10px; border: 1.5px solid rgba(11, 31, 58, 0.16); background: #fff; color: var(--navy, #0b1f3a); caret-color: var(--citrus, #e85d04); min-height: 48px; } .ds-field input:focus-visible { outline: 3px solid var(--citrus, #e85d04); outline-offset: 3px; }"
+    },
+    {
+      "name": "Fleet card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Paper class card with analog line and tabular rates.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-body\"><h3>Light</h3><p class=\"ds-analog\">Pride Go-Go class</p><p>Compact travel scooter. Hotel and park days.</p><p class=\"ds-rates\">From $49/day · $129 / 3 days · $179 / week</p></div></article>",
+      "css": ".ds-card { background: var(--paper, #fffdf8); color: var(--navy, #0b1f3a); border: 1px solid rgba(11, 31, 58, 0.16); border-radius: 18px; overflow: hidden; box-shadow: 0 8px 20px rgba(11, 31, 58, 0.06); font-family: \"Source Sans 3\", \"Source Sans Pro\", \"Segoe UI\", sans-serif; max-width: 22rem; } .ds-card-body { padding: 1.1rem 1.15rem 1.25rem; } .ds-card h3 { margin: 0 0 0.15rem; font-size: 1.35rem; letter-spacing: -0.03em; font-weight: 800; } .ds-analog { margin: 0 0 0.6rem; color: var(--citrus-ink, #9a3c02); font-weight: 700; font-size: 0.95rem; } .ds-card p { margin: 0 0 0.55rem; line-height: 1.45; } .ds-rates { font-weight: 800; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Price strip",
+      "kind": "custom",
+      "refersTo": "price-strip",
+      "description": "Citrus-bordered three-class offer object.",
+      "html": "<div class=\"ds-price-strip\" aria-label=\"Published package prices\"><div class=\"ds-price-cols\"><div><h3>Light</h3><p><strong>$49</strong><span>/ day</span><span>$129 / 3 days</span><span>$179 / week</span></p></div><div><h3>Standard</h3><p><strong>$59</strong><span>/ day</span><span>$149 / 3 days</span><span>$209 / week</span></p></div><div><h3>Heavy-duty</h3><p><strong>$79</strong><span>/ day</span><span>$189 / 3 days</span><span>$249 / week</span></p></div></div></div>",
+      "css": ".ds-price-strip { background: var(--paper, #fffdf8); color: var(--navy, #0b1f3a); border: 2px solid var(--citrus, #e85d04); border-radius: 14px; padding: 0.85rem 0.3rem 0.95rem; box-shadow: 0 10px 28px rgba(11, 31, 58, 0.12); font-family: \"Source Sans 3\", \"Source Sans Pro\", \"Segoe UI\", sans-serif; } .ds-price-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.35rem; text-align: center; } .ds-price-cols h3 { margin: 0 0 0.2rem; color: var(--citrus, #e85d04); font-size: 1rem; font-weight: 800; } .ds-price-cols p { margin: 0; font-size: 0.95rem; line-height: 1.3; font-variant-numeric: tabular-nums; } .ds-price-cols strong { display: block; font-size: 2.1rem; letter-spacing: -0.04em; line-height: 1.05; font-weight: 800; font-variant-numeric: tabular-nums; } .ds-price-cols span { display: block; } @media (max-width: 499px) { .ds-price-cols { grid-template-columns: 1fr; text-align: left; gap: 0; } .ds-price-cols > div { display: grid; grid-template-columns: 7.2rem 1fr; align-items: center; gap: 0.35rem 0.6rem; padding: 0.4rem 0.55rem; border-bottom: 1px solid rgba(11, 31, 58, 0.16); } .ds-price-cols > div:last-child { border-bottom: 0; } .ds-price-cols h3 { font-size: 0.95rem; margin: 0; } .ds-price-cols strong { display: inline; font-size: 1.35rem; } .ds-price-cols span { display: inline; } .ds-price-cols span + span::before { content: \" · \"; } .ds-price-cols p { font-size: 0.88rem; } }"
+    },
+    {
+      "name": "Sticky header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Navy chrome with Scoot / SoCal wordmark and the Call–Request pair.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-wordmark\" href=\"#top\">Scoot <span>SoCal</span></a><nav class=\"ds-nav\" aria-label=\"Primary\"><a href=\"#how\">How it works</a><a href=\"#scooters\">Scooters</a><a href=\"#pricing\">Pricing</a></nav><div class=\"ds-header-actions\"><a class=\"ds-btn ds-btn-ghost\" href=\"tel:+19519029375\">Call 951-902-9375</a><a class=\"ds-btn ds-btn-citrus\" href=\"#contact\">Request dates</a></div></header>",
+      "css": ".ds-header { display: flex; align-items: center; flex-wrap: wrap; gap: 0.55rem 1rem; min-height: 4.25rem; padding: 0.45rem 1rem 0.15rem; background: var(--navy, #0b1f3a); color: var(--sand, #f6f1e8); font-family: \"Source Sans 3\", \"Source Sans Pro\", \"Segoe UI\", sans-serif; } .ds-wordmark { font-weight: 800; font-size: 1.35rem; letter-spacing: -0.03em; color: inherit; text-decoration: none; white-space: nowrap; } .ds-wordmark span { color: var(--citrus, #e85d04); } .ds-nav { display: flex; gap: 1rem; margin-left: auto; font-weight: 600; font-size: 0.92rem; } .ds-nav a { color: inherit; text-decoration: none; } .ds-nav a:hover { color: var(--citrus, #e85d04); } .ds-header-actions { display: flex; gap: 0.5rem; margin-left: 1rem; } .ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; font-size: 0.95rem; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; cursor: pointer; } .ds-btn-ghost { background: transparent; color: var(--sand, #f6f1e8); border: 1.5px solid rgba(246, 241, 232, 0.45); } .ds-btn-ghost:hover { color: #fff; border-color: #fff; } .ds-btn-citrus { background: var(--citrus, #e85d04); color: #fff; border: 0; } .ds-btn-citrus:hover { color: #fff; filter: brightness(1.05); } .ds-btn:focus-visible, .ds-nav a:focus-visible, .ds-wordmark:focus-visible { outline: 3px solid var(--citrus, #e85d04); outline-offset: 3px; }"
+    },
+    {
+      "name": "FAQ row",
+      "kind": "custom",
+      "refersTo": "faq",
+      "description": "Paper disclosure with 800-weight summary.",
+      "html": "<details class=\"ds-faq\" open><summary>Do you deliver to Disneyland hotels?</summary><p>Yes — Anaheim Resort hotels, free.</p></details>",
+      "css": ".ds-faq { background: var(--paper, #fffdf8); color: var(--navy, #0b1f3a); border: 1px solid rgba(11, 31, 58, 0.16); border-radius: 12px; padding: 0.85rem 1rem; font-family: \"Source Sans 3\", \"Source Sans Pro\", \"Segoe UI\", sans-serif; } .ds-faq summary { font-weight: 800; cursor: pointer; } .ds-faq p { margin: 0.6rem 0 0.2rem; line-height: 1.45; } .ds-faq summary:focus-visible { outline: 3px solid var(--citrus, #e85d04); outline-offset: 3px; }"
+    },
+    {
+      "name": "Mobile action bar",
+      "kind": "nav",
+      "refersTo": "mobile-bar",
+      "description": "Fixed Call + Request pair below 800px.",
+      "html": "<div class=\"ds-mobile-bar\" aria-label=\"Quick actions\"><a class=\"ds-btn ds-btn-navy\" href=\"tel:+19519029375\">Call 951-902-9375</a><a class=\"ds-btn ds-btn-citrus\" href=\"#contact\">Request dates</a></div>",
+      "css": ".ds-mobile-bar { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 0.45rem; padding: 0.55rem 0.6rem; background: var(--paper, #fffdf8); border-top: 1px solid rgba(11, 31, 58, 0.16); box-shadow: 0 -8px 24px rgba(11, 31, 58, 0.12); font-family: \"Source Sans 3\", \"Source Sans Pro\", \"Segoe UI\", sans-serif; } .ds-btn { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 48px; padding: 0.7rem 0.45rem; border-radius: 999px; border: 0; font: inherit; font-size: 0.88rem; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; cursor: pointer; } .ds-btn-navy { background: var(--navy, #0b1f3a); color: var(--sand, #f6f1e8); } .ds-btn-citrus { background: var(--citrus, #e85d04); color: #fff; } .ds-btn-citrus:hover { color: #fff; filter: brightness(1.05); } .ds-btn:focus-visible { outline: 3px solid var(--citrus, #e85d04); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Hotel-Curb Operator",
+    "overview": "Scoot SoCal looks like a local mobility-rental shop that already knows the Anaheim and Hollywood hotel corridors — category-standard, played straight. Navy chrome, warm sand page, photoreal four-wheel Pride-style scooters at a hotel curb. Type is large, prices are tabular, and the two actions are always Call and Request dates. Friendly and no-nonsense; not cutesy, not hospital-clinical, not a VC mobility startup.\n\nThe page is sand. Surfaces that hold offers (price strip, fleet cards, form, FAQ, tables) lift to warm paper with a navy hairline. Citrus is the signal for money and action, not a wash. Imagery is photoreal four-wheel travel scooters; captions may admit a placeholder, but the silhouette is never a kick scooter.\n\nThis world refuses motel-neon, valet-ticket chrome, and a photo-only hero that hides the packages. Direction reserved citrus for Call/Request; the shipped CSS also spends it on the SoCal wordmark, the price-strip border, class titles, analog labels, links, focus, and map pins. The build wins: citrus is the action-and-price accent, not a CTA-only swatch.",
+    "keyCharacteristics": [
+      "Sticky navy header; sand canvas; paper cards",
+      "Source Sans 3 at 400 / 600 / 700 / 800 — one family",
+      "Pill CTAs: Request dates always citrus; Call navy on sand, ghost on navy",
+      "Citrus-bordered three-class price strip",
+      "Photoreal 4-wheel Pride-style scooters, never kick scooters",
+      "Soft navy-tinted lift, never hard offset shadows"
+    ],
+    "rules": [
+      { "name": "The Citrus Signal Rule", "body": "Citrus marks action and money — pills, the price-strip border, class titles, the SoCal wordmark, focus, and links. It is never a page wash and never a neon glow.", "section": "colors" },
+      { "name": "The Contrast Field Rule", "body": "Text is navy on sand or paper, sand on navy. Citrus pills use white labels, not navy.", "section": "colors" },
+      { "name": "The One Voice Rule", "body": "Source Sans 3 at 400, 600, 700, and 800 only. Do not add a display serif, a mono, or a system headline face.", "section": "typography" },
+      { "name": "The Tabular Money Rule", "body": "Package prices, rate lines, and the rates table use tabular-nums. Dollars never use a second typeface to look “premium.”", "section": "typography" },
+      { "name": "The Unclipped Strip Rule", "body": "Below 500px the three classes stack as readable rows. From 500px up they are three columns. Never let Heavy-duty become an unread sliver.", "section": "layout" },
+      { "name": "The Soft Navy Shadow Rule", "body": "Shadows are navy-tinted blurs. No black hard offsets, no neon glows, no hover-lift translates.", "section": "elevation" },
+      { "name": "The Pill Action Rule", "body": "Buttons are capsules. Cards are rounded rectangles. Do not square off CTAs or stadium-round the cards.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do keep Request dates (and form submit) on citrus pills and Call as the paired navy or ghost pill.",
+      "Do set the wordmark as Scoot + citrus SoCal, never a lockup in one color.",
+      "Do show photoreal four-wheel Pride-style mobility scooters at hotel/park scale.",
+      "Do stack the price strip to three readable rows below 500px; keep three columns from 500px up.",
+      "Do use tabular-nums on every published rate.",
+      "Do draw focus as a 3px citrus ring with 3px offset.",
+      "Do keep form labels visible and controls at least 48px tall."
+    ],
+    "donts": [
+      "Don't wash a screen in citrus or treat citrus as motel neon.",
+      "Don't introduce a second type family or a system display face.",
+      "Don't use hard-offset drop shadows or hover-lift motion.",
+      "Don't depict kick scooters, Lime/Bird language, or startup micromobility chrome.",
+      "Don't square the pills or stadium-round the cards.",
+      "Don't clip Heavy-duty in the price strip to preserve a three-column look on a narrow phone.",
+      "Don't replace visible labels with placeholder-only fields."
+    ]
+  }
+}

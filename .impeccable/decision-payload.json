@@ -1,0 +1,146 @@
+{
+  "title": "Choose the visual world",
+  "question": "The roll assigned Motor Court Neon. Keep it, take the porte-cochère pick, adopt a declined challenger, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Motor Court Neon",
+      "kicker": "THE ROLL",
+      "lineage": "Mid-century SoCal motel signs, pool-fence stripes, and night-into-morning motor courts",
+      "thesis": "Scoot SoCal as a motor-court sign: the Pride scooter is already at the curb, and vacancy is the booking.",
+      "palette": ["#0B1F3A", "#F6F1E8", "#E85D04"],
+      "materials": ["neon tube", "stucco", "pool-fence stripes", "motel key tags"],
+      "viewport": "Portrait phone: dusk porte-cochère full-bleed, 4-wheel travel scooter at the lobby, Scoot/SoCal as the motel sign, Request dates as a lit vacancy plate, Call as the office light.",
+      "risk": "Vintage pastiche or kick-scooter vacation brand if the Pride 4-wheel object is not the only vehicle on the page.",
+      "raised": [
+        {"from": "particle-detector", "raise": "One corridor at a time: service areas as concentric rings of commitment (core vs quoted), never a fake live map."},
+        {"from": "arcade-pixel", "raise": "Palette law: citrus is reserved for Call and Request dates, never scatter decoration."},
+        {"from": "gravity-rain", "raise": "One gravity: the mobile fold is one dominant photo of the scooter at the hotel, not competing motifs."},
+        {"from": "curved-crease", "raise": "One arc: the porte-cochère curve rules the hero instead of a three-column SaaS grid."},
+        {"from": "risograph", "raise": "Two inks: type is navy or citrus only; photography is the third register."},
+        {"from": "console-atmosphere", "raise": "Generous void: one large photographic object in space; the selected scooter class swells."}
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "Porte-Cochère Arrival",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Anaheim Resort hotel valet tickets, laminated arrival sleeves, lobby drop",
+      "thesis": "The site is the arrival: a Pride scooter already waiting under the hotel canopy, the valet ticket as the rental request.",
+      "palette": ["#0B1F3A", "#F6F1E8", "#E85D04"],
+      "materials": ["laminated valet ticket", "porte-cochère canopy", "hotel brass", "morning glare"],
+      "viewport": "Portrait phone: morning hotel canopy, scooter at the curb, laminated ticket stack as the form, Call and Request as punch-stamped actions.",
+      "risk": "This is the direction most hotel-rental sites land on: familiar, clear, and easy to flatten into a generic hero.",
+      "comp": ".impeccable/mocks/decision/model-pick.webp"
+    },
+    {
+      "id": "challenger-particle-detector",
+      "label": "Corridor Event Display",
+      "verdict": "declined",
+      "lineage": "Particle-detector event displays",
+      "thesis": "One booking as one frozen event: tracks through concentric service rings.",
+      "palette": ["#0B1F3A", "#7A93B0", "#F5D64C", "#E85D04"],
+      "materials": ["steel rings", "track lines", "calorimeter bars"],
+      "viewport": "Concentric Anaheim/Hollywood rings, a delivery track blooming to the hotel pin.",
+      "risk": "Families booking Disneyland do not identify with CERN.",
+      "case": "Loses audience identification and product clarity; hotel drop is not a collision.",
+      "kept": "One event held at a time: isolate a corridor, dim the rest.",
+      "hero": "https://impeccable.style/worlds/cards/scientific-notation-particle-detector-event-display-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/scientific-notation-particle-detector-event-display.webp"
+    },
+    {
+      "id": "challenger-arcade-pixel",
+      "label": "Phosphor Cabinet",
+      "verdict": "declined",
+      "lineage": "CRT arcade cabinet screens",
+      "thesis": "The rental as a 240-line stage: classes as sprite states, citrus as the power-up.",
+      "palette": ["#0B1F3A", "#E85D04", "#F6F1E8", "#F5D64C"],
+      "materials": ["fat pixels", "scanlines", "phosphor bloom"],
+      "viewport": "Integer-scaled playfield, three scooter sprites, Call as START.",
+      "risk": "Reads as a kick-scooter game, which the brief forbids.",
+      "case": "Loses both axes: play language fights Pride medical scooters.",
+      "kept": "Palette law: flashing citrus reserved for the primary action.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-crt-arcade-pixel-glow-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/medium-native-crt-arcade-pixel-glow.webp"
+    },
+    {
+      "id": "challenger-gravity-rain",
+      "label": "Gravity Rain Garden",
+      "verdict": "declined",
+      "lineage": "Impossible gravity-rain gardens",
+      "thesis": "Deliveries fall toward hotels according to the color of each cloud.",
+      "palette": ["#2C3A32", "#4A6B8A", "#E85D04", "#F6F1E8"],
+      "materials": ["dusk garden", "colored rain", "orbiting drops"],
+      "viewport": "Scooters raining toward a hotel canopy under a citrus cloud.",
+      "risk": "Dream physics hides the private-pay hotel rental.",
+      "case": "Loses both: the drop is literal, not surreal.",
+      "kept": "One gravity field dominant on phones.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-gravity-rain-garden-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-gravity-rain-garden.webp"
+    },
+    {
+      "id": "challenger-curved-crease",
+      "label": "Curved Crease Shell",
+      "verdict": "declined",
+      "lineage": "Deployable curved-crease paper shells",
+      "thesis": "The compact travel scooter as one crease that locks into a rigid day.",
+      "palette": ["#F6F1E8", "#0B1F3A", "#E85D04"],
+      "materials": ["cotton paper", "charcoal arc", "graphite shadow"],
+      "viewport": "A cream disc lifting along one citrus arc into a scooter silhouette.",
+      "risk": "Folding explains only the light class, not the whole offer.",
+      "case": "Loses audience; holds a fragment of product (travel breakdown) and nothing else.",
+      "kept": "One sweeping arc as compositional law, not a rectangular card grid.",
+      "hero": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-curved-crease-shell-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/paper-folds-pleats-deployable-curved-crease-shell.webp"
+    },
+    {
+      "id": "challenger-risograph",
+      "label": "Two-Ink Zine",
+      "verdict": "declined",
+      "lineage": "Small-press risograph zine covers",
+      "thesis": "Navy and citrus printed a hair out of line, photography as the overlap.",
+      "palette": ["#E85D04", "#0B1F3A", "#F6F1E8"],
+      "materials": ["spot inks", "halftone dots", "newsprint"],
+      "viewport": "Wordmark in citrus, scooter in navy, misregister making a third color.",
+      "risk": "Indie-print youth culture, not a family booking a parent at Disneyland.",
+      "case": "Loses both axes; overlap is pretty and proves nothing about hotel delivery.",
+      "kept": "Two inks, imagery in one register, type in the other.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-risograph-zine-cover-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/posters-covers-sleeves-risograph-zine-cover.webp"
+    },
+    {
+      "id": "challenger-console-atmosphere",
+      "label": "Memory Towers",
+      "verdict": "declined",
+      "lineage": "Sixth-generation console system menus",
+      "thesis": "Classes as glowing objects in a navy void; the selected scooter swells.",
+      "palette": ["#0B1F3A", "#F6F1E8", "#E85D04"],
+      "materials": ["fog", "translucent cubes", "particle motes"],
+      "viewport": "Three floating scooters in dusk void, the chosen one glowing citrus.",
+      "risk": "Game-menu luxury fights sun-washed hospitality and the sand ground.",
+      "case": "Loses both: adult children booking Disneyland do not glide through fog rooms.",
+      "kept": "Generous void and a selected object that swells.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-console-dashboard-atmosphere-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/digital-design-canon-console-dashboard-atmosphere.webp"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "comp",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "A high-craft mobility-rental landing: sticky call bar, photo hero, three class cards, pricing grid, FAQ.",
+    "palette": ["#F6F1E8", "#0B1F3A", "#E85D04"],
+    "materials": ["clean grid", "product photography", "large type"],
+    "viewport": "The arrangement a visitor expects, at full craft, with the brief’s navy, sand, and citrus.",
+    "risk": "Indistinguishable from A Scooter 4 U and Scootaround by design.",
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  },
+  "steer": true
+}

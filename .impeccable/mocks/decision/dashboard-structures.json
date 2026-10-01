@@ -1,0 +1,59 @@
+{
+  "title": "Choose the dashboard layout",
+  "question": "Three ways to run today’s route. Same navy / sand / citrus, same live bookings. Lock one.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Window board",
+      "kicker": "THE ROLL",
+      "lineage": "Hotel dispatch sheet grouped by delivery window",
+      "thesis": "Today’s stops read as a departure board: morning, afternoon, then flexible — hotel name first, In or Out on every row.",
+      "palette": ["#0b1f3a", "#ffffff", "#f3f3f3", "#e85d04"],
+      "materials": ["paper stop rows", "navy hairline", "citrus In/Out tags"],
+      "viewport": "Date and giant In/Out counts head the page. Three window bands of hotel-first rows fill the fold. Remaining scooters this week and pending payments sit under the route.",
+      "risk": "Staff who think in hotel order, not time of day, have to scan three bands to find one stop.",
+      "raised": [
+        {
+          "from": "split-flap concourse",
+          "raise": "Stops are time-ranked rows; status restyles the row without breaking the grid."
+        },
+        {
+          "from": "metro tiles",
+          "raise": "In and Out counts are the only oversized type — live tiles of the day’s load."
+        }
+      ],
+      "comp": ".impeccable/mocks/decision/assigned.jpg"
+    },
+    {
+      "id": "split-dock",
+      "label": "Two docks",
+      "lineage": "Side-by-side delivery and pickup docks",
+      "thesis": "Deliveries and pickups sit as equal columns you work down, hotel and guest first, window as a quiet tag.",
+      "palette": ["#0b1f3a", "#ffffff", "#f3f3f3", "#e85d04"],
+      "materials": ["paper dock cards", "navy hairline", "citrus Out outline"],
+      "viewport": "A short today header, then two equal docks of stop cards. Remaining units as a strip under both columns. Pending pay as a slim row. Stacks to Deliveries then Pickups on a phone.",
+      "risk": "On a phone, pickups wait below a long delivery list.",
+      "comp": ".impeccable/mocks/decision/split-dock.jpg"
+    },
+    {
+      "id": "catch-then-go",
+      "label": "Catch then go",
+      "lineage": "Exception tickets above the day’s route",
+      "thesis": "Pending payments and sold-out days sit as a short ticket strip, then today’s In and Out lists so problems do not hide under the route.",
+      "palette": ["#0b1f3a", "#ffffff", "#f3f3f3", "#e85d04"],
+      "materials": ["outlined exception tickets", "hotel-first stop rows", "week remaining grid"],
+      "viewport": "Exception tickets across the top. Today’s deliveries and pickups as two lists. Inventory last. Quiet days show an empty-ticket line, not a blank page.",
+      "risk": "Quiet days put an empty problem strip above the work, which can feel like a false alarm.",
+      "comp": ".impeccable/mocks/decision/catch-then-go.jpg"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "steer": true,
+  "canon": false,
+  "buildPath": {
+    "value": "comp",
+    "toggle": true
+  }
+}
