@@ -11,7 +11,7 @@ function originOk(req: NextRequest) {
   const origin = req.headers.get("origin");
   if (!origin) return true;
   try {
-    return new URL(origin).origin === new URL(appUrl()).origin || origin.includes("localhost");
+   return new URL(origin).origin === new URL(appUrl()).origin || origin.includes("localhost") || origin.endsWith(".vercel.app");
   } catch {
     return false;
   }
