@@ -121,12 +121,12 @@ export default async function AdminHome() {
 
   const deliveries = stops.filter((s) => s.kind === "delivery");
   const pickups = stops.filter((s) => s.kind === "pickup");
-  const bands = WINDOW_ORDER.map((value) => ({
+  const bands: { value: string; label: string; items: Stop[] }[] = WINDOW_ORDER.map((value) => ({
     value,
     label: windowLabel(value),
     items: stops.filter((s) => s.window === value).sort(sortStops),
   }));
-  const unwindowed = stops.filter((s) => !WINDOW_ORDER.includes(s.window)).sort(sortStops);
+  const unwindowed = stops.filter((s) => !(WINDOW_ORDER as readonly string[]).includes(s.window)).sort(sortStops);
   if (unwindowed.length) {
     bands.push({ value: "other", label: "Other", items: unwindowed });
   }
